@@ -283,21 +283,29 @@
 
     /* ── RESPONSIVE ── */
     @media(max-width:900px) {
-      .mob-toggle { display: flex; } .tab-btn { font-size: 0.68rem; padding: 0 0.4rem; max-width: none; }
       .two-col, .contact-grid, .ft-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .hero-inner { grid-template-columns: 1fr; } .hero-cards { display: none; }
       .team-grid, .giving-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media(max-width:480px) {
-      .tab-bar { display: none; }
-      .mob-toggle { display: flex; }
+      .tab-bar { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+      .tab-bar::-webkit-scrollbar { display: none; }
+      .tab-btn { flex: 0 0 auto; max-width: none; min-width: 80px; font-size: 0.70rem; padding: 0 1rem; }
+      .mob-toggle { display: none; }
     }
     @media(max-width:600px) {
-      .section { padding: 3.5rem 1.25rem; }
-      .contact-section { padding: 3.5rem 1.25rem; }
+      .section { padding: 3rem 1.25rem; }
+      .contact-section { padding: 3rem 1.25rem; }
       .svc-grid, .events-grid, .sermons-grid, .team-grid, .giving-grid { grid-template-columns: 1fr; }
       .info-strip { display: none; }
       .ft-inner { grid-template-columns: 1fr 1fr; }
+      .tab-bar { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+      .tab-bar::-webkit-scrollbar { display: none; }
+      .tab-btn { flex: 0 0 auto; max-width: none; min-width: 68px; font-size: 0.62rem; padding: 0 0.6rem; height: 42px; letter-spacing: 0.02em; }
+      .mob-toggle { display: none; }
+      .mob-menu { display: none !important; }
+      .header-top { height: 46px; padding: 0 1rem; }
+      .site-logo { font-size: 1.2rem; }
+      .tab-panels { margin-top: 88px; }
+      #panel-home .hero { min-height: calc(100vh - 88px); }
     }
   </style>
 </head>
